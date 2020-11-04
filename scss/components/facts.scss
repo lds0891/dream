@@ -1,0 +1,113 @@
+.container-facts {
+  padding-bottom: 39px;
+}
+.facts-wrap__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  .facts-wrap__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    margin-bottom: 13px;
+    background-color: #FFFFFF;
+    //Content Icon
+    .facts-wrap__icon-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 47px;
+      line-height: 16px;
+      color: #FFFFFF;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+    }
+
+    .facts-icon__facebook {
+      background-color: #1B78C7;
+      opacity: 0.4;
+    }
+
+    .facts-icon__dribble {
+      background-color: #DC67AE;
+      opacity: 0.4;
+    }
+
+    .facts-icon__twitter {
+      background-color: #00BFF3;
+      opacity: 0.4;
+    }
+
+    .facts-icon__google {
+      background-color: #EC6445;
+      opacity: 0.4;
+    }
+  }
+
+  .facts-wrap__icon-facebook {
+    border: 10px solid #1B78C7;
+  }
+
+  .facts-wrap__icon-dribble {
+    border: 10px solid #DC67AE;
+  }
+
+  .facts-wrap__icon-twitter {
+    border: 10px solid #00BFF3;
+  }
+
+  .facts-wrap__icon-google {
+    border: 10px solid #EC6445;
+  }
+
+  //Content title
+  .facts-wrap__title {
+    font-family: $font-family-primary;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #777777;
+    margin-bottom: 14px;
+  }
+
+  //Content subtitle
+  .facts-wrap__subtitle {
+    font-family: $font-family-primary;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .facts-subtitle__facebook {
+    color: #1B78C7;
+  }
+
+  .facts-subtitle__dribble {
+    color: #DC67AE;
+  }
+
+  .facts-subtitle__twitter {
+    color: #00BFF3;
+  }
+
+  .facts-subtitle__google {
+    color: #EC6445;
+  }
+}
+
+.facts-link {
+
+  &:hover {
+    text-decoration: none;
+  }
+}

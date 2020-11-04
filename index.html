@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dream</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstap4-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- font-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+  <!-- build:css css/combined.css -->
+  <link rel="stylesheet" href="./css/vendors.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- endbuild -->
+</head>
+<body class="body-overflow">
+  <div class="preloader" id="page-preloader">
+    <div class="loader">
+      <svg width="100" height="100" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.5938 10.5625C25.4688 11.0833 27.0052 12.125 28.2031 13.6875C29.401 15.25 30 17.0208 30 19C30 21.3958 29.1406 23.4531 27.4219 25.1719C25.7031 26.8906 23.6458 27.75 21.25 27.75C18.75 27.75 16.6667 26.8646 15 25.0938C13.3333 26.8646 11.25 27.75 8.75 27.75C6.35417 27.75 4.29688 26.8906 2.57812 25.1719C0.859375 23.4531 0 21.3958 0 19C0 17.0208 0.598958 15.25 1.79688 13.6875C2.99479 12.125 4.53125 11.0833 6.40625 10.5625C6.30208 9.83333 6.25 9.3125 6.25 9C6.25 6.60417 7.10938 4.54688 8.82812 2.82812C10.5469 1.10938 12.6042 0.25 15 0.25C17.3958 0.25 19.4531 1.10938 21.1719 2.82812C22.8906 4.54688 23.75 6.60417 23.75 9C23.75 9.3125 23.6979 9.83333 23.5938 10.5625ZM7.5 9C7.5 9.625 7.52604 10.0677 7.57812 10.3281C7.83854 10.276 8.22917 10.25 8.75 10.25C11.25 10.25 13.3333 11.1354 15 12.9062C16.6667 11.1354 18.75 10.25 21.25 10.25C21.7708 10.25 22.1615 10.276 22.4219 10.3281C22.474 10.0677 22.5 9.625 22.5 9C22.5 6.91667 21.7708 5.14583 20.3125 3.6875C18.8542 2.22917 17.0833 1.5 15 1.5C12.9167 1.5 11.1458 2.22917 9.6875 3.6875C8.22917 5.14583 7.5 6.91667 7.5 9ZM16.25 19C16.25 18.375 16.224 17.9323 16.1719 17.6719C15.9115 17.724 15.5208 17.75 15 17.75C14.4792 17.75 14.0885 17.724 13.8281 17.6719C13.776 17.9323 13.75 18.375 13.75 19C13.75 20.5104 14.1667 21.8906 15 23.1406C15.8333 21.8906 16.25 20.5104 16.25 19ZM14.6094 16.5C14.7656 16.5 14.8958 16.5 15 16.5C15.1042 16.5 15.2344 16.5 15.3906 16.5C15.5469 16.4479 15.6771 16.4219 15.7812 16.4219C15.4688 15.6927 15.2083 15.1719 15 14.8594C14.7917 15.1719 14.5312 15.6927 14.2188 16.4219C14.3229 16.4219 14.4531 16.4479 14.6094 16.5ZM12.9688 16.1875C13.2812 15.25 13.6979 14.4688 14.2188 13.8438C12.6562 12.2812 10.8333 11.5 8.75 11.5C8.64583 11.5 8.51562 11.526 8.35938 11.5781C8.20312 11.5781 8.07292 11.5781 7.96875 11.5781C8.80208 13.974 10.4688 15.5104 12.9688 16.1875ZM15.7812 13.8438C16.3021 14.4688 16.7188 15.25 17.0312 16.1875C19.5312 15.5104 21.1979 13.974 22.0312 11.5781C21.9271 11.5781 21.7969 11.5781 21.6406 11.5781C21.4844 11.526 21.3542 11.5 21.25 11.5C19.1667 11.5 17.3438 12.2812 15.7812 13.8438ZM3.4375 24.3125C4.89583 25.7708 6.66667 26.5 8.75 26.5C10.8333 26.5 12.6562 25.7188 14.2188 24.1562C13.0729 22.5938 12.5 20.875 12.5 19C12.5 18.6875 12.5521 18.1667 12.6562 17.4375C9.6875 16.6042 7.70833 14.7292 6.71875 11.8125C5.15625 12.2292 3.85417 13.1146 2.8125 14.4688C1.77083 15.7708 1.25 17.2812 1.25 19C1.25 21.0833 1.97917 22.8542 3.4375 24.3125ZM15.7812 24.1562C17.3438 25.7188 19.1667 26.5 21.25 26.5C23.3333 26.5 25.1042 25.7708 26.5625 24.3125C28.0208 22.8542 28.75 21.0833 28.75 19C28.75 17.2812 28.2292 15.7708 27.1875 14.4688C26.1458 13.1146 24.8438 12.2292 23.2812 11.8125C22.2917 14.7292 20.3125 16.6042 17.3438 17.4375C17.4479 18.1667 17.5 18.6875 17.5 19C17.5 20.875 16.9271 22.5938 15.7812 24.1562Z" fill="#78CD13"/>
+      </svg>
+    </div>
+  </div>
+  <!--Nav-bar-->
+  <nav class="navbar navbar-expand-lg navbar-light header container__menu">
+    <div class="container">
+      <a class="header__logo" href="#home-page">
+        <img src="images/logo.png" class="header__logo-img" alt="">
+        <span class="header__logo-text">Dream</span>
+      </a>
+      <!--Mobile search&button-->
+      <div class="search-item__mobile">
+        <i class="fas fa-search search-item__icon"></i>
+      </div>
+      <button class="header-wrap__toogler" type="button" data-target="#menuMobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!--Menu-->
+      <div class="header-menu" id="menuMobile">
+        <div class="header__menu-wrap">
+          <ul class="navbar-nav header__menu">
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#home-page">Home</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#social">Social</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item header__menu-item">
+              <a class="nav-link header__menu-link" href="#contactUs">Contact Us</a>
+            </li>
+          </ul>
+          <div class="search-item">
+            <i class="fas fa-search search-item__icon"></i>
+          </div>
+          <button class="btn btn-outline-success btn_sign" id="singIn">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Search-->
+  <div class="search-item__content">
+    <form class="search-item__content-form" id="search" action="">
+      <input type="text" class="search-item__form-input" id="search-input" placeholder="Search">
+      <button type="submit" class="search-item__form-btn"><i class="fa fa-search"></i></button>
+      <button class="search-item__form-cancel" id="cancelSeach"><i class="fas fa-times"></i></button>
+    </form>
+  </div>
+  <!--End Search-->
+  <!--Sing In-->
+  <div class="sing-wrap">
+    <div class="sing-wrap__content">
+      <button class="sing-content__close" id="singInClose"><i class="fas fa-times"></i></button>
+      <form action="" class="sing-content__form">
+        <div class="sing-content__form__content">
+          <div class="sing-content__title">Sign in to continue</div>
+          <div class="sing-content__subtitle">Some features are only available to registered users</div>
+          <span class="sing-form__login">
+            <input type="text" name="login" required="true" class="sing-form__login-input" value="">
+            <label class="sing-form__login-text">
+              <span class="sing-login__text">Login</span>
+            </label>
+            <span class="sing-form__login-border"></span>
+          </span>
+          <span class="sing-form__login">
+            <input type="password" name="password" required="true" class="sing-form__login-input" value="">
+            <label class="sing-form__login-text">
+              <span class="sing-login__text">Password</span>
+            </label>
+            <span class="sing-form__login-border"></span>
+          </span>
+          <div class="sing-form__reminder">
+            <a href="#" class="sing-form__reminder-link">Remind password</a>
+          </div>
+          <button class="sing-form__btn" type="submit">Sign in</button>
+          <div class="sing-form__social">
+            <span class="sing-form__social-title">Sign in with:</span>
+            <div class="sing-form__social-content">
+              <a href="" class="sing-form__social-item"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="sing-form__social-item"><i class="fab fa-twitter"></i></a>
+              <a href="" class="sing-form__social-item"><i class="fab fa-google"></i></a>
+              <a href="" class="sing-form__social-item"><i class="fab fa-vk"></i></a>
+            </div>
+          </div>
+          <div class="sing-form__register">
+            <div class="sing-form__register-title">No account?</div>
+            <a href="#" class="sing-form__register-link">Sign up</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--End Sing In-->
+  <!--Nav-bar end-->
+  <!--Slider-->
+  <div class="navi bd-example slider wow fadeIn" id="home-page" data-wow-delay="5s">
+    <div class="container-fluid container__slider">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-slider__wrap" data-ride="carousel">
+        <!--Sliders-->
+        <div class="carousel-inner slider__inner">
+          <!--1-->
+          <div class="carousel-item active slider__item">
+            <img src="images/banner-img.png" class="d-block slider__item-img" alt="...">
+            <div class="carousel-caption d-md-block slider__caption">
+              <h2 class="slider__caption_title">We Have a Dream To Change The World.</h2>
+              <p class="slider__caption_subtitle">It Sounds Hard To believe But Nothing Is Impossible As You Already Aware Of This Fact</p>
+            </div>
+          </div>
+          <!--2-->
+          <div class="carousel-item slider__item">
+            <img src="images/banner-img-2.png" class="d-block slider__item-img" alt="...">
+            <div class="carousel-caption d-md-block slider__caption">
+              <h2 class="slider__caption_title">We Have a Dream To Change The World.</h2>
+              <p class="slider__caption_subtitle">It Sounds Hard To believe But Nothing Is Impossible As You Already Aware Of This Fact</p>
+            </div>
+          </div>
+          <!--3-->
+          <div class="carousel-item slider__item">
+            <img src="images/banner-img-3.png" class="d-block slider__item-img" alt="...">
+            <div class="carousel-caption d-md-block slider__caption">
+              <h2 class="slider__caption_title">We Have a Dream To Change The World.</h2>
+              <p class="slider__caption_subtitle">It Sounds Hard To believe But Nothing Is Impossible As You Already Aware Of This Fact</p>
+            </div>
+          </div>
+        </div>
+        <!--Controls-->
+        <a class="carousel-control-prev btn-arrow" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <i class="fas fa-chevron-left btn-arrow__icon"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next btn-arrow_next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <i class="fas fa-chevron-right btn-arrow__icon"></i>
+          <span class="sr-only">Next</span>
+        </a>
+        <a class="btn-arrow_down" href="#">
+          <i class="far fa-arrow-alt-circle-down btn-arrow__icon "></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--Slider end-->
+  <!--Services-->
+  <div class="navi container__white" id="services">
+    <div class="container">
+      <div class="services-wrap">
+        <span class="all__title wow bounceIn" data-wow-offset="100">OUR SERVICES & CAPABILITIES</span>
+        <div class="row">
+          <div class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-2 col-md-8 offset-lg-0 col-lg-8">
+            <ul class="row nav nav-tabs nav-tab__style" id="serviceTab" role="tablist">
+              <li class="nav-item col-12 col-sm-12 col-md-6 col-lg-6 services-item wow slideInLeft" data-wow-offset="50" data-wow-duration="1s">
+                <a class="nav-link active services-item__header" id="creative-tab" data-toggle="tab" href="#creative" role="tab" aria-controls="creative" aria-selected="true">
+                  <i class="far fa-lightbulb services-item__header-icon"></i>
+                  <span class="services-item__header-title">Creative Design</span>
+                </a>
+                <div class="services-item__content">
+                  <span class="services-item__content-text">
+                    In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt.
+                  </span>
+                  <a href="#" class="read-more">Read more<i class="fas fa-long-arrow-alt-right read-more__icon"></i></a>
+                </div>
+              </li>
+              <li class="nav-item col-12 col-sm-12 col-md-6 col-lg-6 services-item wow slideInLeft" data-wow-offset="50" data-wow-duration="1s">
+                <a class="nav-link services-item__header" id="retina-tab" data-toggle="tab" href="#retina" role="tab" aria-controls="retina" aria-selected="false">
+                  <i class="far fa-eye services-item__header-icon"></i>
+                  <span class="services-item__header-title">Retina Ready</span>
+                </a>
+                <div class="services-item__content">
+                  <span class="services-item__content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet
+                  </span>
+                  <a href="#" class="read-more">Read more<i class="fas fa-long-arrow-alt-right read-more__icon"></i></a>
+                </div>
+              </li>
+              <li class="nav-item col-12 col-sm-12 col-md-6 col-lg-6 services-item wow slideInLeft" data-wow-duration="1s">
+                <a class="nav-link services-item__header" id="quality-tab" data-toggle="tab" href="#quality" role="tab" aria-controls="quality" aria-selected="false">
+                  <i class="fas fa-code services-item__header-icon"></i>
+                  <span class="services-item__header-title">Quality Code</span>
+                </a>
+                <div class="services-item__content">
+                  <span class="services-item__content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet
+                  </span>
+                  <a href="#" class="read-more">Read more<i class="fas fa-long-arrow-alt-right read-more__icon"></i></a>
+                </div>
+              </li>
+              <li class="nav-item col-12 col-sm-12 col-md-6 col-lg-6 services-item wow slideInLeft" data-wow-duration="1s">
+                <a class="nav-link services-item__header" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="false">
+                  <i class="far fa-grin services-item__header-icon"></i>
+                  <span class="services-item__header-title">User Friendly</span>
+                </a>
+                <div class="services-item__content">
+                  <span class="services-item__content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet
+                  </span>
+                  <a href="#" class="read-more">Read more<i class="fas fa-long-arrow-alt-right read-more__icon"></i></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-0 col-lg-4 wow slideInRight" data-wow-duration="1s">
+            <div class="tab-content services-progress">
+              <!--Progress bar #1-->
+              <div class="tab-pane progress-bar-list active" id="creative" role="tabpanel" aria-labelledby="creative-tab">
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Development</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-blue" role="progressbar" style="width: 90%"  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UI Design</span>
+                  <div class="progress">
+                  <div class="progress-bar progress-bar-pink" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Mysql</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-green" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UX Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-orange" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                 <span class="progress-bar-list__item-text">Sketch & Photoshop</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-emerald" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Progress bar #2-->
+              <div class="tab-pane progress-bar-list" id="quality" role="tabpanel" aria-labelledby="quality-tab">
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Development</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UI Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-pink" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Mysql</span>
+                  <div class="progress">
+                    <div class="progress-bar-green " role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UX Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-orange " role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Sketch & Photoshop</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-emerald" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Progress bar #3-->
+              <div class="tab-pane progress-bar-list" id="retina" role="tabpanel" aria-labelledby="retina-tab">
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Development</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-blue" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UI Design</span>
+                  <div class="progress">
+                    <div class="progress-bar-pink" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Mysql</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-green" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UX Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-orange" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Sketch & Photoshop</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-emerald" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Progress bar #4-->
+              <div class="tab-pane progress-bar-list" id="user" role="tabpanel" aria-labelledby="user-tab">
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Development</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-blue" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UI Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-pink" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Mysql</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-green" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">UX Design</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-orange" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress-bar-list__item">
+                  <span class="progress-bar-list__item-text">Sketch & Photoshop</span>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-emerald " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Services end-->
+  <!--Portfolio-->
+  <div class="navi container__grey" id="portfolio">
+    <div class="container">
+      <div class="portfolio-wrap">
+        <span class="all__title portfolio-title wow bounceIn">FEATURED PORTFOLIO</span>
+        <span class="portfolio-wrap__title wow bounceIn">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer </span>
+        <div class="portfolio-wrap__content">
+          <!--Portfolio navigation-->
+          <ul class="nav nav-tabs content-nav wow bounceIn" id="portfolioTab" role="tablist">
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+            </li>
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text" id="websites-tab" data-toggle="tab" href="#websites" role="tab" aria-controls="websites" aria-selected="false">Websites</a>
+            </li>
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text" id="graphic-tab" data-toggle="tab" href="#graphic" role="tab" aria-controls="graphic" aria-selected="false">Graphic Design</a>
+            </li>
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="false">3D Design</a>
+            </li>
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text" id="logos-tab" data-toggle="tab" href="#logos" role="tab" aria-controls="logos" aria-selected="false">Logo’s & Branding</a>
+            </li>
+            <li class="nav-item content-nav__item">
+              <a class="nav-link content-nav__item-text" id="banner-tab" data-toggle="tab" href="#banner" role="tab" aria-controls="banner" aria-selected="false">Banner Design</a>
+            </li>
+          </ul>
+          <!--Portfolio navigation end-->
+          <!--Portfolio slider-->
+          <div class="portfolio-wrap__content-slider wow fadeIn" data-wow-delay="1s">
+            <div class="tab-content" id="tabContent">
+              <!--First Nav Slider All-->
+              <div class="tab-pane active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/tea.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/forest.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/clock.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/bridge.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/9.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/10.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/11.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/13.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/1.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/7.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                        <img src="images/portfolio/6.png" class="portfolio-slide__content-img" alt="">
+                        <div class="portfolio-slide__img-nav">
+                          <i class="fas fa-link portfolio-slide__nav-item"></i>
+                          <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                          <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                        </div>
+                      </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End First Nav Slider-->
+              <!--Second Nav Slider-->
+              <div class="tab-pane" id="websites" role="tabpanel" aria-labelledby="websites-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/tea.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/16.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/15.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/14.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/13.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/12.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/11.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/10.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/5.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing
+                        lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/4.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/9.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Web Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida
+                        adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End Second Nav Slider-->
+              <!--Third Nav Slider-->
+              <div class="tab-pane" id="graphic" role="tabpanel" aria-labelledby="graphic-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/9.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/10.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/bridge.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/3.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/16.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/7.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/12.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/11.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/13.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/2.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/15.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Piluku Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Graphic Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End Third Nav Slider-->
+              <!--Fourth Nav Slider-->
+              <div class="tab-pane" id="design" role="tabpanel" aria-labelledby="design-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/1.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/forest.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/clock.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/16.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/14.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/4.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/11.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/7.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/13.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Archon Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/2.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Cascade Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">3D Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End Fourth Nav Slider-->
+              <!--Fifth Nav Slider-->
+              <div class="tab-pane" id="logos" role="tabpanel" aria-labelledby="logos-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/13.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/14.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/15.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/16.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/5.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/10.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/1.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/3.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/7.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/12.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/6.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Template</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Logo’s & Branding</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End Fifth Nav Slider-->
+              <!--Sixth Nav Slider-->
+              <div class="tab-pane" id="banner" role="tabpanel" aria-labelledby="banner-tab">
+                <div class="slider-portfolio">
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/1.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/2.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/3.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/4.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/5.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/6.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/7.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/8.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/9.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/10.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/11.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                  <div class="portfolio-slide__content">
+                    <div class="portfolio-slide__img">
+                      <img src="images/portfolio/12.png" class="portfolio-slide__content-img" alt="">
+                      <div class="portfolio-slide__img-nav">
+                        <i class="fas fa-link portfolio-slide__nav-item"></i>
+                        <i class="fas fa-expand-arrows-alt portfolio-slide__nav-item"></i>
+                        <i class="fas fa-long-arrow-alt-right portfolio-slide__nav-item"></i>
+                      </div>
+                    </div>
+                    <!--Text Slide-->
+                    <div class="portfolio-slide-text">
+                      <h4 class="portfolio-slide-text__title">Delighted</h4>
+                      <h6 class="portfolio-slide__text-subtitle">Banner Design</h6>
+                      <p class="portfolio-slide__text-content">Praesent turpis mauris, aliquet id dolor Gravida adipiscing lectus ut rutrum Aenean at posuere risus.</p>
+                    </div>
+                    <!--End text Slide-->
+                  </div>
+                </div>
+              </div>
+              <!--End Sixth Nav Slider-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Portfolio end-->
+  <!--Clients-->
+  <div class="navi container__white" id="testimonials">
+    <div class="container">
+      <div class="clients-wrap">
+        <span class="all__title clients-wrap-title wow bounceIn">OUR CLIENTS & THEIR GOSSIPS</span>
+        <div class="clients-wrap__content wow bounceIn" data-wow-duration="1s">
+          <div class="clients-wrap__content-reviews">
+            <div class="wrapper-carousel-fix">
+              <div id="clients-carousel" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                  <!--First slide-->
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-10 col-10 offset-md-2 offset-sm-1 offset-1">
+                        <div class="clients-slide">
+                          <div class="avatar mx-auto mb-4">
+                            <div class="clients-slide__item">
+                              <div class="row">
+                                <div class="col-md-4 col-sm-12 col-12 text-center">
+                                  <img src="images/photography.png" class="img-fluid clients-slide__item-img" alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-12 d-flex flex-column">
+                                  <!--Slide Content-->
+                                  <div class="clients-slide__item-content order-sm-1 order-1">
+                                    <span class="clients-title">Anusha</span>
+                                    <span class="clients-subtitle">Web Designer</span>
+                                    <span class="clients-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque.In egetau volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquetyite. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet</span>
+                                  </div>
+                                  <!--Controls-->
+                                  <div class="client-controls order-sm-0 order-0">
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-prev" href="#clients-carousel" role="button" data-slide="prev"><i class="fas fa-chevron-left clients-controls__slider-icon"></i></a>
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-next" href="#clients-carousel" role="button" data-slide="next"><i class="fas fa-chevron-right clients-controls__slider-icon"></i></a>
+                                  </div>
+                                  <!--Controls End-->
+                                  <!--Slide Content End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--First slide end-->
+                  <!--Second slide-->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-10 col-10 offset-md-2 offset-sm-1 offset-1">
+                        <div class="clients-slide">
+                          <div class="avatar mx-auto mb-4">
+                            <div class="clients-slide__item">
+                              <div class="row">
+                                <div class="col-md-4 col-sm-12 col-12 text-center">
+                                  <img src="images/photography-2.png" class="img-fluid clients-slide__item-img" alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-12 d-flex flex-column">
+                                  <!--Slide Content-->
+                                  <div class="clients-slide__item-content order-sm-1 order-1">
+                                    <span class="clients-title">Rachel</span>
+                                    <span class="clients-subtitle">Web Designer</span>
+                                    <span class="clients-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque.In egetau volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquetyite. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet</span>
+                                  </div>
+                                  <!--Controls-->
+                                  <div class="client-controls order-sm-0 order-0">
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-prev" href="#clients-carousel" role="button" data-slide="prev"><i class="fas fa-chevron-left clients-controls__slider-icon"></i></a>
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-next" href="#clients-carousel" role="button" data-slide="next"><i class="fas fa-chevron-right clients-controls__slider-icon"></i></a>
+                                  </div>
+                                  <!--Controls End-->
+                                  <!--Slide Content End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Second slide end-->
+                  <!--Third slide-->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-10 col-10 offset-md-2 offset-sm-1 offset-1">
+                        <div class="clients-slide">
+                          <div class="avatar mx-auto mb-4">
+                            <div class="clients-slide__item">
+                              <div class="row">
+                                <div class="col-md-4 col-sm-12 col-12 text-center">
+                                  <img src="images/photography-3.png" class="img-fluid clients-slide__item-img" alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-12 d-flex flex-column">
+                                  <!--Slide Content-->
+                                  <div class="clients-slide__item-content order-sm-1 order-1">
+                                    <span class="clients-title">Ginny</span>
+                                    <span class="clients-subtitle">Back End Developer</span>
+                                    <span class="clients-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque.In egetau volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquetyite. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet</span>
+                                  </div>
+                                  <!--Controls-->
+                                  <div class="client-controls order-sm-0 order-0">
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-prev" href="#clients-carousel" role="button" data-slide="prev"><i class="fas fa-chevron-left clients-controls__slider-icon"></i></a>
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-next" href="#clients-carousel" role="button" data-slide="next"><i class="fas fa-chevron-right clients-controls__slider-icon"></i></a>
+                                  </div>
+                                  <!--Controls End-->
+                                  <!--Slide Content End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Third slide end-->
+                  <!--Fourth slide-->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-10 col-10 offset-md-2 offset-sm-1 offset-1">
+                        <div class="clients-slide">
+                          <div class="avatar mx-auto mb-4">
+                            <div class="clients-slide__item">
+                              <div class="row">
+                                <div class="col-md-4 col-sm-12 col-12 text-center">
+                                  <img src="images/photography-4.png" class="img-fluid clients-slide__item-img" alt="...">
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-12 d-flex flex-column">
+                                  <!--Slide Content-->
+                                  <div class="clients-slide__item-content order-sm-1 order-1">
+                                    <span class="clients-title">James</span>
+                                    <span class="clients-subtitle">Web Developer</span>
+                                    <span class="clients-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Ut eget imperdiet neque.In egetau volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquetyite. Nam vel iaculis mauris. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet</span>
+                                  </div>
+                                  <!--Controls-->
+                                  <div class="client-controls order-sm-0 order-0">
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-prev" href="#clients-carousel" role="button" data-slide="prev"><i class="fas fa-chevron-left clients-controls__slider-icon"></i></a>
+                                    <a class="btn-floating clients-controls__slider clients-controls__slider-next" href="#clients-carousel" role="button" data-slide="next"><i class="fas fa-chevron-right clients-controls__slider-icon"></i></a>
+                                  </div>
+                                  <!--Controls End-->
+                                  <!--Slide Content End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Fourth slide end-->
+                </div>
+                <!--Slides End-->
+              </div>
+            </div>
+          </div>
+          <div class="clients-wrap__content-partners">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+                    <a class="partners-item" href="#">
+                      <svg class="partners-item__content" width="160" height="30" viewBox="0 0 199 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M54.0183 9.82636C53.05 9.92267 49.0167 10.8265 47.662 11.1165C46.211 11.5028 32.9501 21.7453 32.0791 24.2631C31.8854 25.133 31.7891 26.4729 31.7891 27.7312L31.6928 29.7632C31.6928 31.2163 32.095 33.5542 32.2887 34.8125C33.1597 35.0073 39.4694 34.8369 40.6304 35.0295L40.4865 37.6298C39.353 37.5494 31.3404 37.5674 26.7631 37.5674C24.4401 37.5674 16.9704 37.8235 14.6759 37.7536L15.1088 35.2793C16.3671 35.1819 21.5783 35.5047 22.7235 34.295C23.2918 33.696 23.1097 33.0525 23.1097 29.5695V27.9238C23.1097 27.1491 23.1097 25.6971 22.9171 24.3414C22.4324 22.8904 10.7527 8.3066 7.75229 5.98356C6.88128 5.69358 1.4224 5.14748 0.0666749 4.85749L0 2.62971C0.676274 2.2921 6.74687 2.71331 12.6386 2.4953C16.51 2.35242 25.3439 2.4953 26.435 2.62547L26.1556 4.5908C24.9946 4.88078 19.4003 4.98767 17.9493 5.37502C21.7233 10.9874 27.6923 18.2147 29.6291 21.0225C30.6927 19.4741 40.0505 13.0363 40.3405 10.8106C38.8884 10.5206 34.0804 9.82636 33.3068 9.82636L32.8464 7.29272C34.1651 7.08634 41.094 7.29272 44.5378 7.29272C47.5117 7.29272 53.8638 7.29272 55.6704 7.44089L54.0183 9.82636Z" fill="#CF4044"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M74.0209 36.5481C73.5944 36.4878 68.7451 36.4878 66.9756 36.4878C65.9395 36.4878 60.6553 36.4571 59.7398 36.4571L60.015 34.1912C61.2352 34.1288 63.5064 33.6377 64.5425 33.5149C63.8715 31.9899 61.6575 27.1459 61.1696 26.2325C59.889 26.2325 55.281 26.3775 53.9994 26.6209C53.756 27.0464 52.0066 28.762 51.7018 31.0818C52.5558 31.2639 54.1941 31.6173 55.171 31.7391L54.8111 34.0547C53.774 33.9944 49.637 34.1171 48.6612 34.0547C47.7457 34.0547 43.4954 34.0653 42.7028 34.187L43.4574 31.7401C44.4331 31.6184 46.6821 30.9199 47.5362 30.7358C48.8167 28.9059 54.7508 17.3076 55.2387 16.2101C54.445 16.027 53.0966 15.3899 52.2426 15.2671L52.1251 13.5918C53.1623 13.6532 58.3185 13.8077 58.8667 13.7802C60.0933 13.7199 64.6462 13.7431 65.6834 13.6818L65.2992 15.3275C64.3848 15.3888 62.8957 15.8344 62.0417 16.0164C62.4682 17.2981 64.1679 21.4288 65.4484 24.4778C66.4242 26.6749 68.0445 30.9792 69.5696 33.48C70.6068 33.6642 72.9869 34.3627 74.0844 34.423L74.1448 35.0326L74.0209 36.5481ZM58.0655 17.1436L58.0041 16.7594C56.9056 19.3216 55.0419 23.3486 54.6746 24.3233L60.6838 24.3212C59.7789 21.9405 58.906 19.5478 58.0655 17.1436Z" fill="#CF4044"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M109.754 30.2701C108.915 30.2056 104.866 30.2119 102.795 30.2701C101.135 30.3178 97.192 30.1188 95.3135 30.2024L95.1685 27.9016C95.8162 27.837 99.8548 27.5629 100.633 27.4327C100.891 26.203 100.767 24.4578 100.767 22.9719L100.668 20.2636C98.5954 20.2636 84.9058 20.9748 84.3238 21.0404L83.3236 21.1685C83.3236 24.8578 83.5173 26.0241 83.7766 27.3841C84.8773 27.5767 88.8259 27.837 89.6662 27.9651L89.6154 30.4723C88.6449 30.4077 82.5712 30.4723 80.6947 30.4723C78.4289 30.4723 72.9202 30.4247 71.627 30.4892L71.8016 27.9016C72.8377 27.837 76.7525 27.4507 77.5949 27.3206C77.724 25.6378 77.7896 22.9835 77.7896 20.2012V16.77C77.7896 15.6048 77.724 12.2393 77.6594 11.0741C76.8181 10.945 72.9022 10.6836 71.737 10.619L71.5306 8.66002C72.3064 8.72564 77.7113 8.57641 80.5593 8.57641C83.2136 8.57641 89.2302 8.62933 89.9424 8.56371L89.7308 10.619C88.501 10.6836 84.4232 11.0074 83.711 11.1365C83.5163 12.1081 83.3226 12.9494 83.3226 16.0557L83.2263 17.676C84.3915 17.676 98.8324 17.6188 100.631 17.3627V15.1328C100.631 12.2848 101.073 9.20612 100.748 8.36369C100.037 8.17001 96.1771 7.62709 94.9473 7.56147L95.1198 5.49454C95.8956 5.56016 99.5331 5.53794 102.251 5.60249C105.099 5.60249 109.238 5.71997 110.08 5.59085L109.888 7.2916C109.046 7.35721 105.292 8.30548 105.292 8.30548C105.292 8.30548 105.036 10.0792 105.225 12.6309C105.379 14.7497 105.427 18.9153 105.427 18.9153C105.535 23.5561 105.822 27.3057 105.561 27.4994C105.251 27.7333 108.534 27.9312 109.439 28.0614L109.795 28.6773L109.754 30.2701ZM143.142 19.4582C143.45 27.3629 136.232 31.2861 126.855 31.2861C122.952 31.2861 118.202 30.5421 114.149 28.109C110.984 26.2114 110.461 23.7476 110.461 20.6679C110.461 14.3031 117.392 9.0262 128 9.09393C132.039 9.09393 135.931 9.70883 139.078 12.1631C141.884 14.3517 142.358 15.4397 142.871 17.8358L143.142 19.4582ZM137.939 19.999C138.173 13.4564 133.053 11.7144 126.584 12.1589C123.198 12.3906 116.311 14.1813 116.311 19.999C116.311 25.7479 121.594 28.8604 128.645 28.2466C134.099 27.7714 136.964 25.7638 137.667 22.9719L137.939 19.999ZM190.459 24.1805L186.269 23.773C186.707 21.6542 186.325 5.38448 186.291 3.64881L186.076 0.231445C187.242 0.462162 187.067 0.341514 191.992 0.85904C194.991 1.17442 195.382 1.30777 196.368 1.34693L195.08 5.39929C193.981 8.64203 190.795 23.0978 190.459 24.1805ZM187.565 32.7742L185.32 32.5794L185.298 27.7153L188.141 28.0709L190.687 28.1884L189.982 32.9509L187.565 32.7742ZM182.449 16.2451C183.003 23.6471 174.46 29.7971 163.755 29.7971C159.3 29.7971 155.509 29.2573 151.117 26.3511C147.504 23.9614 145.778 21.8902 145.327 17.8125C144.527 10.5894 153.24 4.52088 165.351 4.5992C169.96 4.5992 174.405 5.30087 177.997 8.10334C181.2 10.6021 181.763 12.9738 182.345 15.7096L182.449 16.2451ZM176.865 17.295C177.31 10.1861 170.461 7.59639 163.078 8.10334C159.216 8.36792 151.995 10.6529 151.995 17.295C151.995 23.8588 158.037 27.1682 166.085 26.4654C172.313 25.9236 174.905 23.5794 176.326 20.4044C176.326 20.4044 176.731 19.4582 176.865 17.295ZM195.626 28.2328C196.917 28.2328 198.001 29.2541 198.001 30.6077C198.003 30.92 197.942 31.2294 197.824 31.5181C197.705 31.8068 197.53 32.0691 197.309 32.2898C197.088 32.5104 196.826 32.6851 196.537 32.8037C196.248 32.9222 195.939 32.9824 195.626 32.9805C195.314 32.9829 195.004 32.9232 194.715 32.8048C194.426 32.6865 194.164 32.5118 193.943 32.291C193.722 32.0702 193.547 31.8077 193.428 31.5188C193.309 31.2298 193.249 30.9201 193.252 30.6077C193.249 30.2952 193.309 29.9853 193.427 29.6961C193.546 29.4069 193.721 29.1441 193.942 28.9231C194.163 28.7021 194.426 28.5272 194.715 28.4087C195.004 28.2902 195.314 28.2304 195.626 28.2328ZM195.626 32.6376C196.711 32.6376 197.58 31.7571 197.58 30.6077C197.58 29.4584 196.712 28.5779 195.626 28.5779C194.535 28.5779 193.673 29.4584 193.673 30.6077C193.673 31.7571 194.534 32.6376 195.626 32.6376ZM194.718 29.2139H195.766C196.423 29.2139 196.736 29.4764 196.736 30.0056C196.736 30.5104 196.417 30.721 196.002 30.7665L196.8 31.992H196.347L195.595 30.7972H195.14V31.992H194.718V29.2139ZM195.141 30.4543H195.575C195.95 30.4543 196.316 30.4331 196.316 29.9876C196.316 29.6055 195.984 29.56 195.696 29.56H195.141V30.4543Z" fill="#CF4044"/>
+                        </svg>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+                    <a class="partners-item" href="#">
+                      <svg class="partners-item__content" xmlns="http://www.w3.org/2000/svg" width="160" height="55" viewBox="0.512 0.511 748.99 256.61">
+                          <g transform="translate(4636.413 -2865.209)">
+                            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-11445.563" y1="603.918" x2="-11445.563" y2="465.768" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#196eef"/>
+                              <stop offset=".5" stop-color="#186dee"/>
+                              <stop offset="1" stop-color="#1065e7"/>
+                            </linearGradient>
+                            <path d="M-4520.08 2990.41h32.21v45.24c-10.05 3.229-22.74 5-35.931 5-53.46 0-84.88-45.78-84.88-90.49 0-43.851 28.42-74.61 68.07-74.61 25.09 0 39.689 8.5 52.75 20.34v14.76l24.49-24.49c-15.49-10.48-37.92-20.44-69.98-20.44-70.38 0-102.55 50.351-102.55 91.73 0 58.899 42.9 94.38 96.811 94.38 26.14 0 49.35-3.99 76.16-11.45v-46.74c0-2.39 1.05-4.03 2.62-5.47l8.46-8.46h-57.45l-10.78 10.7z" fill="url(#a)"/>
+                            <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="-11323.519" y1="556.948" x2="-11323.519" y2="467.618" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#de5744"/>
+                              <stop offset=".5" stop-color="#db4632"/>
+                              <stop offset="1" stop-color="#d13d29"/>
+                            </linearGradient>
+                            <path d="M-4375.79 2928.93c-40.51 0-65.61 29.601-65.61 61.021 0 27.12 20.221 59.319 61.19 59.319 39.41 0 63.59-29.659 63.59-61.629 0-29.78-23.63-58.7-59.17-58.7v-.011zm-6.721 8.63c28.561 0 41.28 37.21 41.28 63.75 0 39.47-29.61 40.25-33.15 40.25-13.55 0-23.02-8.189-30.109-18.93-6.24-9.899-12.34-28.29-12.34-46.26 0-17.9 5.859-26.64 15.08-33.07 7.54-4.82 14.6-5.74 19.229-5.74h.01z" fill="url(#b)"/>
+                            <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="-11130.575" y1="556.948" x2="-11130.575" y2="413.518" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#1a6fef"/>
+                              <stop offset=".25" stop-color="#1e72ef"/>
+                              <stop offset=".5" stop-color="#166bec"/>
+                              <stop offset=".75" stop-color="#1267e9"/>
+                              <stop offset="1" stop-color="#1063e5" stop-opacity=".87"/>
+                            </linearGradient>
+                            <path d="M-4110.979 2928.92c-35.381 0-54.521 22.4-54.521 47.41 0 19.04 13.64 40.52 41.78 40.52h7.119s-1.939 4.71-1.949 9.26c0 6.711 2.41 10.48 7.529 16.28-48.42 2.95-67.88 22.48-67.88 43.47 0 18.381 17.601 36.471 54.59 36.471 43.79 0 66.47-24.311 66.47-48.17 0-16.82-8.38-26.04-29.6-41.94-6.24-4.85-7.45-7.939-7.45-11.569 0-5.2 3.11-8.641 4.25-9.94 2.01-2.12 5.49-4.54 6.79-5.7 7.13-6.04 17.2-14.979 17.2-32.82 0-12.24-5.091-22.77-16.69-32.63h14.16l10.64-10.64h-52.438zm-9.76 7.96c6.42 0 11.779 2.27 17.439 6.98 6.279 5.66 16.311 20.87 16.311 39.69 0 20.31-15.78 25.87-24.32 25.87-4.18 0-9.189-1.17-13.43-4.07-9.42-6.109-18.771-22.37-18.771-41.72 0-17.46 10.4-26.75 22.771-26.75zm14.01 113.22c2.699 0 4.64.221 4.64.221s6.37 4.55 10.82 7.949c10.36 8.19 16.819 14.45 16.819 25.601 0 15.33-14.22 27.35-37.25 27.35-25.279 0-44.6-11.77-44.6-30.989 0-15.921 13.24-29.623 49.571-30.132z" fill="url(#c)"/>
+                            <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="-11061.771" y1="601.408" x2="-11061.771" y2="470.128" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#0aa561"/>
+                              <stop offset=".5" stop-color="#009b58"/>
+                              <stop offset="1" stop-color="#00914b"/>
+                            </linearGradient>
+                            <path d="M-4050.88 3045.76h48.57l7.399-7.399-13.93-1.74c-3.75-.46-5.979-3.7-5.979-6.84v-146.71c0-2.89 1.34-4.37 2.319-5.311l8.761-8.76h-41.42l-10.78 10.78h16.1v151.97c0 2.16-.68 3.63-2.14 5.14l-8.9 8.87z" fill="url(#d)"/>
+                            <linearGradient id="e" gradientUnits="userSpaceOnUse" x1="-10998.289" y1="556.948" x2="-10998.289" y2="467.864" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#de5644"/>
+                              <stop offset=".5" stop-color="#da4531"/>
+                              <stop offset="1" stop-color="#ce3a28"/>
+                            </linearGradient>
+                            <path d="M-3936.5 2928.93c-27.12 0-55.93 20.67-55.93 57.78 0 30.649 20.67 62.56 59.29 62.56 9.63 0 17.56-1.239 24.99-4.649 7.97-3.67 15.64-9.63 21.239-17.12-10.569 5.33-19.189 8.83-30.64 8.83-21.76 0-42.74-15.7-50.08-44.56l76.87-31.07c-4.44-15.83-16.96-31.771-45.729-31.771h-.01zm-5.021 8.49c14.551 0 25.07 11.97 25.07 21.34 0 3.03-1.899 4.63-5.66 6.11l-47.25 19.11s-1.279-5.95-1.279-12.38c0-26.97 19.5-34.18 29.119-34.18z" fill="url(#e)"/>
+                            <linearGradient id="f" gradientUnits="userSpaceOnUse" x1="-11221.762" y1="556.754" x2="-11221.762" y2="467.795" gradientTransform="matrix(1.3509 0 0 -1.3509 10917.478 3681.026)">
+                              <stop offset="0" stop-color="#ffc01a"/>
+                              <stop offset=".5" stop-color="#ffba03"/>
+                              <stop offset="1" stop-color="#ffb300"/>
+                            </linearGradient>
+                            <path d="M-4238.33 2928.93c-40.51 0-65.61 29.601-65.61 61.021 0 27.12 20.221 59.319 61.19 59.319 39.41 0 63.59-29.659 63.59-61.629 0-29.78-23.63-58.7-59.17-58.7v-.011zm-6.721 8.63c28.561 0 41.28 37.21 41.28 63.75 0 39.47-29.61 40.25-33.15 40.25-13.55 0-23.02-8.189-30.109-18.93-6.24-9.899-12.34-28.29-12.34-46.26 0-17.9 5.859-26.64 15.08-33.07 7.54-4.82 14.6-5.74 19.229-5.74h.01z" fill="url(#f)"/>
+                          </g>
+                        </svg>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+                    <a class="partners-item" href="#">
+                      <svg class="partners-item__content" xmlns="http://www.w3.org/2000/svg" width="160" viewBox="0 0 1033.746 220.695">
+                          <path d="M1033.746 99.838v-18.18h-22.576V53.395l-.76.234-21.205 6.488-.418.127v21.415h-33.469v-11.93c0-5.555 1.242-9.806 3.69-12.641 2.431-2.801 5.908-4.225 10.343-4.225 3.188 0 6.489.751 9.811 2.232l.833.372V36.321l-.392-.144c-3.099-1.114-7.314-1.675-12.539-1.675-6.585 0-12.568 1.433-17.786 4.273-5.221 2.844-9.328 6.904-12.205 12.066-2.867 5.156-4.322 11.111-4.322 17.701v13.116h-15.72v18.18h15.72v76.589h22.567V99.838h33.469v48.671c0 20.045 9.455 30.203 28.102 30.203 3.064 0 6.289-.359 9.582-1.062 3.352-.722 5.635-1.443 6.979-2.213l.297-.176v-18.348l-.918.607c-1.225.816-2.75 1.483-4.538 1.979-1.796.505-3.296.758-4.458.758-4.368 0-7.6-1.177-9.605-3.5-2.028-2.344-3.057-6.443-3.057-12.177V99.838h22.575zM866.635 160.26c-8.191 0-14.649-2.716-19.2-8.066-4.579-5.377-6.899-13.043-6.899-22.783 0-10.049 2.32-17.914 6.901-23.386 4.554-5.436 10.95-8.195 19.014-8.195 7.825 0 14.054 2.635 18.516 7.836 4.484 5.228 6.76 13.03 6.76 23.196 0 10.291-2.14 18.196-6.36 23.484-4.191 5.248-10.493 7.914-18.732 7.914m1.003-80.885c-15.627 0-28.039 4.579-36.889 13.61-8.844 9.032-13.328 21.531-13.328 37.153 0 14.838 4.377 26.773 13.011 35.468 8.634 8.698 20.384 13.104 34.921 13.104 15.148 0 27.313-4.643 36.159-13.799 8.845-9.146 13.326-21.527 13.326-36.784 0-15.07-4.205-27.094-12.502-35.731-8.301-8.641-19.977-13.021-34.698-13.021m-86.602 0c-10.63 0-19.423 2.719-26.14 8.08-6.758 5.393-10.186 12.466-10.186 21.025 0 4.449.74 8.401 2.196 11.753 1.465 3.363 3.732 6.324 6.744 8.809 2.989 2.465 7.603 5.047 13.717 7.674 5.14 2.115 8.973 3.904 11.408 5.314 2.38 1.382 4.069 2.771 5.023 4.124.927 1.324 1.397 3.136 1.397 5.372 0 6.367-4.768 9.465-14.579 9.465-3.639 0-7.79-.76-12.337-2.258a46.347 46.347 0 0 1-12.634-6.406l-.937-.672v21.727l.344.16c3.193 1.474 7.219 2.717 11.964 3.695 4.736.979 9.039 1.477 12.777 1.477 11.535 0 20.824-2.732 27.602-8.125 6.821-5.43 10.278-12.67 10.278-21.525 0-6.388-1.861-11.866-5.529-16.284-3.643-4.382-9.966-8.405-18.785-11.961-7.026-2.82-11.527-5.161-13.384-6.958-1.79-1.736-2.699-4.191-2.699-7.3 0-2.756 1.122-4.964 3.425-6.752 2.321-1.797 5.552-2.711 9.604-2.711 3.76 0 7.607.594 11.433 1.758 3.823 1.164 7.181 2.723 9.984 4.63l.922.63v-20.61l-.354-.152c-2.586-1.109-5.996-2.058-10.138-2.828-4.123-.765-7.863-1.151-11.116-1.151m-95.157 80.885c-8.189 0-14.649-2.716-19.199-8.066-4.58-5.377-6.896-13.041-6.896-22.783 0-10.049 2.319-17.914 6.901-23.386 4.55-5.436 10.945-8.195 19.013-8.195 7.822 0 14.051 2.635 18.514 7.836 4.485 5.228 6.76 13.03 6.76 23.196 0 10.291-2.141 18.196-6.361 23.484-4.191 5.248-10.49 7.914-18.732 7.914m1.006-80.885c-15.631 0-28.044 4.579-36.889 13.61-8.844 9.032-13.331 21.531-13.331 37.153 0 14.844 4.38 26.773 13.014 35.468 8.634 8.698 20.383 13.104 34.92 13.104 15.146 0 27.314-4.643 36.16-13.799 8.843-9.146 13.326-21.527 13.326-36.784 0-15.07-4.206-27.094-12.505-35.731-8.303-8.641-19.977-13.021-34.695-13.021M602.409 98.07V81.658h-22.292v94.767h22.292v-48.477c0-8.243 1.869-15.015 5.557-20.13 3.641-5.054 8.493-7.615 14.417-7.615 2.008 0 4.262.331 6.703.986 2.416.651 4.166 1.358 5.198 2.102l.937.679V81.496l-.361-.155c-2.076-.882-5.013-1.327-8.729-1.327-5.602 0-10.615 1.8-14.909 5.344-3.769 3.115-6.493 7.386-8.576 12.712h-.237zm-62.213-18.695c-10.227 0-19.349 2.193-27.108 6.516-7.775 4.333-13.788 10.519-17.879 18.385-4.073 7.847-6.141 17.013-6.141 27.235 0 8.954 2.005 17.171 5.968 24.413 3.965 7.254 9.577 12.929 16.681 16.865 7.094 3.931 15.293 5.924 24.371 5.924 10.594 0 19.639-2.118 26.891-6.295l.293-.168v-20.423l-.937.684c-3.285 2.393-6.956 4.303-10.906 5.679-3.94 1.375-7.532 2.07-10.682 2.07-8.747 0-15.769-2.737-20.866-8.133-5.108-5.403-7.698-12.99-7.698-22.537 0-9.607 2.701-17.389 8.024-23.131 5.307-5.725 12.342-8.629 20.908-8.629 7.327 0 14.467 2.481 21.222 7.381l.935.679V84.371l-.302-.17c-2.542-1.423-6.009-2.598-10.313-3.489-4.286-.889-8.478-1.337-12.461-1.337m-66.481 2.284h-22.292v94.766h22.292V81.659zm-10.918-40.371c-3.669 0-6.869 1.249-9.498 3.724-2.64 2.482-3.979 5.607-3.979 9.295 0 3.63 1.323 6.698 3.938 9.114 2.598 2.409 5.808 3.63 9.54 3.63 3.731 0 6.953-1.221 9.582-3.626 2.646-2.42 3.988-5.487 3.988-9.118 0-3.559-1.306-6.652-3.879-9.195-2.571-2.538-5.833-3.824-9.692-3.824m-55.62 33.379v101.758h22.75V44.189H398.44l-40.022 98.221-38.839-98.221H286.81v132.235h21.379V74.657h.734l41.013 101.768h16.134l40.373-101.758h.734z" fill="#706d6e"/><path d="M104.868 104.868H0V0h104.868v104.868z" fill="#f1511b"/>
+                          <path d="M220.654 104.868H115.788V0h104.866v104.868z" fill="#80cc28"/>
+                          <path d="M104.865 220.695H0V115.828h104.865v104.867z" fill="#00adef"/>
+                          <path d="M220.654 220.695H115.788V115.828h104.866v104.867z" fill="#fbbc09"/>
+                        </svg>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+                    <a class="partners-item partners-item_trait "  href="#">
+                      <svg class="partners-item__content" width="153" height="34" viewBox="0 0 147 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g filter="url(#filter0_d)">
+                            <mask id="path-1-inside-1" fill="white">
+                              <path d="M39.3514 7.7031C38.811 7.7031 38.4616 7.7031 38.3062 7.7031V4.46259C38.3062 3.93424 38.039 3.66895 37.5055 3.66895C36.9714 3.66895 36.7052 3.93424 36.7052 4.46259V7.7031H35.594C35.1112 7.69131 34.8685 7.92603 34.8685 8.40693C34.8685 8.89325 35.1252 9.13306 35.6377 9.13306H36.7052V18.7396C36.7052 19.267 36.9641 19.5301 37.4835 19.5301C38.032 19.5301 38.3062 19.267 38.3062 18.7396V9.13434H39.3947C39.9209 9.13434 40.1842 8.89707 40.1842 8.41967C40.1842 7.94227 39.9065 7.7031 39.3514 7.7031Z"/>
+                            </mask>
+                            <path d="M39.3514 7.7031C38.811 7.7031 38.4616 7.7031 38.3062 7.7031V4.46259C38.3062 3.93424 38.039 3.66895 37.5055 3.66895C36.9714 3.66895 36.7052 3.93424 36.7052 4.46259V7.7031H35.594C35.1112 7.69131 34.8685 7.92603 34.8685 8.40693C34.8685 8.89325 35.1252 9.13306 35.6377 9.13306H36.7052V18.7396C36.7052 19.267 36.9641 19.5301 37.4835 19.5301C38.032 19.5301 38.3062 19.267 38.3062 18.7396V9.13434H39.3947C39.9209 9.13434 40.1842 8.89707 40.1842 8.41967C40.1842 7.94227 39.9065 7.7031 39.3514 7.7031Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-1-inside-1)"/>
+                            <mask id="path-2-inside-2" fill="white">
+                              <path d="M49.2344 8.36678C48.4526 7.65466 47.5124 7.29797 46.4172 7.29797C45.0513 7.29797 43.9624 7.83842 43.1509 8.92188V4.50556C43.1509 3.94886 42.8878 3.66956 42.3617 3.66956C41.8496 3.66956 41.5926 3.94886 41.5926 4.50333V18.7383C41.5926 19.2676 41.8493 19.5307 42.3617 19.5307C42.8878 19.5307 43.1509 19.2676 43.1509 18.7412V12.0388C43.1509 11.0121 43.4563 10.1945 44.0687 9.58145C44.6245 9.04322 45.293 8.77252 46.0755 8.77252C46.8573 8.77252 47.5201 9.04259 48.0605 9.58145C48.6586 10.1811 48.9571 10.9984 48.9571 12.0388V18.7412C48.9571 19.2676 49.2128 19.5307 49.7262 19.5307C50.2513 19.5307 50.5154 19.2676 50.5154 18.7412V11.3541C50.5157 10.1311 50.0886 9.13463 49.2344 8.36678Z"/>
+                            </mask>
+                            <path d="M49.2344 8.36678C48.4526 7.65466 47.5124 7.29797 46.4172 7.29797C45.0513 7.29797 43.9624 7.83842 43.1509 8.92188V4.50556C43.1509 3.94886 42.8878 3.66956 42.3617 3.66956C41.8496 3.66956 41.5926 3.94886 41.5926 4.50333V18.7383C41.5926 19.2676 41.8493 19.5307 42.3617 19.5307C42.8878 19.5307 43.1509 19.2676 43.1509 18.7412V12.0388C43.1509 11.0121 43.4563 10.1945 44.0687 9.58145C44.6245 9.04322 45.293 8.77252 46.0755 8.77252C46.8573 8.77252 47.5201 9.04259 48.0605 9.58145C48.6586 10.1811 48.9571 10.9984 48.9571 12.0388V18.7412C48.9571 19.2676 49.2128 19.5307 49.7262 19.5307C50.2513 19.5307 50.5154 19.2676 50.5154 18.7412V11.3541C50.5157 10.1311 50.0886 9.13463 49.2344 8.36678Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-2-inside-2)"/>
+                            <mask id="path-3-inside-3" fill="white">
+                              <path d="M62.277 12.5926C62.277 10.9566 61.8356 9.65752 60.9544 8.69604C60.071 7.73519 58.869 7.25525 57.3457 7.25525C55.7368 7.25525 54.4568 7.90908 53.504 9.22025C52.6205 10.4012 52.1804 11.8397 52.1804 13.5318C52.1804 15.2385 52.6288 16.6701 53.5253 17.822C54.5502 19.1335 55.9374 19.7854 57.6884 19.7854C59.5945 19.7854 61.0528 19.1456 62.0633 17.865C62.163 17.7516 62.2133 17.6093 62.2133 17.4379C62.2133 17.2395 62.1344 17.0542 61.9777 16.8835C61.8207 16.7134 61.6356 16.6271 61.421 16.6271C61.25 16.6271 60.9716 16.7854 60.5859 17.0981C60.0585 17.5086 59.6579 17.7889 59.3878 17.9303C58.8311 18.2437 58.2607 18.4 57.6757 18.4C56.7056 18.4 55.8463 17.9739 55.0967 17.1198C54.3476 16.2656 53.9734 15.3347 53.9734 14.3216H61.7213C62.0914 14.321 62.277 13.7439 62.277 12.5926ZM53.9734 12.6999C54.0014 11.4627 54.3651 10.4716 55.0651 9.733C55.7078 9.07694 56.4785 8.75178 57.3785 8.75178C58.2782 8.75178 59.034 9.07694 59.6483 9.733C60.3331 10.4594 60.6764 11.448 60.6764 12.6999H53.9734Z"/>
+                            </mask>
+                            <path d="M62.277 12.5926C62.277 10.9566 61.8356 9.65752 60.9544 8.69604C60.071 7.73519 58.869 7.25525 57.3457 7.25525C55.7368 7.25525 54.4568 7.90908 53.504 9.22025C52.6205 10.4012 52.1804 11.8397 52.1804 13.5318C52.1804 15.2385 52.6288 16.6701 53.5253 17.822C54.5502 19.1335 55.9374 19.7854 57.6884 19.7854C59.5945 19.7854 61.0528 19.1456 62.0633 17.865C62.163 17.7516 62.2133 17.6093 62.2133 17.4379C62.2133 17.2395 62.1344 17.0542 61.9777 16.8835C61.8207 16.7134 61.6356 16.6271 61.421 16.6271C61.25 16.6271 60.9716 16.7854 60.5859 17.0981C60.0585 17.5086 59.6579 17.7889 59.3878 17.9303C58.8311 18.2437 58.2607 18.4 57.6757 18.4C56.7056 18.4 55.8463 17.9739 55.0967 17.1198C54.3476 16.2656 53.9734 15.3347 53.9734 14.3216H61.7213C62.0914 14.321 62.277 13.7439 62.277 12.5926ZM53.9734 12.6999C54.0014 11.4627 54.3651 10.4716 55.0651 9.733C55.7078 9.07694 56.4785 8.75178 57.3785 8.75178C58.2782 8.75178 59.034 9.07694 59.6483 9.733C60.3331 10.4594 60.6764 11.448 60.6764 12.6999H53.9734Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-3-inside-3)"/>
+                            <mask id="path-4-inside-4" fill="white">
+                              <path d="M78.0716 8.26136C77.3044 7.59129 76.3779 7.25562 75.2989 7.25562C73.6884 7.25562 72.4374 7.93843 71.5428 9.30597C70.8023 7.93811 69.7252 7.25562 68.3166 7.25562C67.05 7.25562 66.0118 7.81805 65.2009 8.94131V8.1827C65.2153 7.56581 64.956 7.25562 64.422 7.25562C63.9032 7.25562 63.6426 7.56899 63.6426 8.1948V18.6979C63.6426 19.2246 63.9057 19.4877 64.4328 19.4877C64.9449 19.4877 65.2009 19.2218 65.2009 18.696V12.256C65.2009 11.2324 65.5134 10.4022 66.1392 9.77509C66.7099 9.2203 67.386 8.94099 68.1669 8.94099C68.851 8.94099 69.4278 9.16966 69.8975 9.627C70.4093 10.1388 70.6667 10.8385 70.6667 11.721V18.6953C70.6667 19.2211 70.9278 19.4861 71.4558 19.4861C71.9676 19.4861 72.2227 19.2259 72.2227 18.6969V12.2869C72.2227 11.2506 72.5454 10.4184 73.1842 9.79515C73.753 9.22667 74.4285 8.94131 75.2145 8.94131C75.8964 8.94131 76.4652 9.17826 76.9206 9.64578C77.4321 10.1595 77.6897 10.864 77.6897 11.7608V18.7195C77.6897 19.2332 77.9591 19.488 78.5009 19.488C79.027 19.488 79.2901 19.2313 79.2901 18.7167V11.0458C79.2897 9.90503 78.8856 8.97794 78.0716 8.26136Z"/>
+                            </mask>
+                            <path d="M78.0716 8.26136C77.3044 7.59129 76.3779 7.25562 75.2989 7.25562C73.6884 7.25562 72.4374 7.93843 71.5428 9.30597C70.8023 7.93811 69.7252 7.25562 68.3166 7.25562C67.05 7.25562 66.0118 7.81805 65.2009 8.94131V8.1827C65.2153 7.56581 64.956 7.25562 64.422 7.25562C63.9032 7.25562 63.6426 7.56899 63.6426 8.1948V18.6979C63.6426 19.2246 63.9057 19.4877 64.4328 19.4877C64.9449 19.4877 65.2009 19.2218 65.2009 18.696V12.256C65.2009 11.2324 65.5134 10.4022 66.1392 9.77509C66.7099 9.2203 67.386 8.94099 68.1669 8.94099C68.851 8.94099 69.4278 9.16966 69.8975 9.627C70.4093 10.1388 70.6667 10.8385 70.6667 11.721V18.6953C70.6667 19.2211 70.9278 19.4861 71.4558 19.4861C71.9676 19.4861 72.2227 19.2259 72.2227 18.6969V12.2869C72.2227 11.2506 72.5454 10.4184 73.1842 9.79515C73.753 9.22667 74.4285 8.94131 75.2145 8.94131C75.8964 8.94131 76.4652 9.17826 76.9206 9.64578C77.4321 10.1595 77.6897 10.864 77.6897 11.7608V18.7195C77.6897 19.2332 77.9591 19.488 78.5009 19.488C79.027 19.488 79.2901 19.2313 79.2901 18.7167V11.0458C79.2897 9.90503 78.8856 8.97794 78.0716 8.26136Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-4-inside-4)"/>
+                            <mask id="path-5-inside-5" fill="white">
+                              <path d="M91.0524 12.5926C91.0524 10.9566 90.6113 9.65752 89.7288 8.69604C88.8463 7.73519 87.6444 7.25525 86.1223 7.25525C84.5121 7.25525 83.2328 7.90908 82.2777 9.22025C81.3952 10.4012 80.9541 11.8397 80.9541 13.5318C80.9541 15.2385 81.4028 16.6701 82.3016 17.822C83.3233 19.1335 84.7118 19.7854 86.4625 19.7854C88.3686 19.7854 89.8262 19.1456 90.8374 17.865C90.9371 17.7516 90.9871 17.6093 90.9871 17.4379C90.9871 17.2395 90.9081 17.0542 90.7527 16.8835C90.5944 16.7134 90.4087 16.6271 90.196 16.6271C90.0231 16.6271 89.7463 16.7854 89.3597 17.0981C88.8329 17.5086 88.4323 17.7889 88.1622 17.9303C87.6074 18.2437 87.0348 18.4 86.4501 18.4C85.4781 18.4 84.6204 17.9739 83.8713 17.1198C83.1226 16.2656 82.7465 15.3347 82.7465 14.3216H90.4931C90.8657 14.321 91.0524 13.7439 91.0524 12.5926ZM82.7465 12.6999C82.7752 11.4627 83.1392 10.4716 83.8398 9.733C84.4831 9.07694 85.2523 8.75178 86.1529 8.75178C87.0542 8.75178 87.8103 9.07694 88.4221 9.733C89.1074 10.4594 89.4504 11.448 89.4504 12.6999H82.7465Z"/>
+                            </mask>
+                            <path d="M91.0524 12.5926C91.0524 10.9566 90.6113 9.65752 89.7288 8.69604C88.8463 7.73519 87.6444 7.25525 86.1223 7.25525C84.5121 7.25525 83.2328 7.90908 82.2777 9.22025C81.3952 10.4012 80.9541 11.8397 80.9541 13.5318C80.9541 15.2385 81.4028 16.6701 82.3016 17.822C83.3233 19.1335 84.7118 19.7854 86.4625 19.7854C88.3686 19.7854 89.8262 19.1456 90.8374 17.865C90.9371 17.7516 90.9871 17.6093 90.9871 17.4379C90.9871 17.2395 90.9081 17.0542 90.7527 16.8835C90.5944 16.7134 90.4087 16.6271 90.196 16.6271C90.0231 16.6271 89.7463 16.7854 89.3597 17.0981C88.8329 17.5086 88.4323 17.7889 88.1622 17.9303C87.6074 18.2437 87.0348 18.4 86.4501 18.4C85.4781 18.4 84.6204 17.9739 83.8713 17.1198C83.1226 16.2656 82.7465 15.3347 82.7465 14.3216H90.4931C90.8657 14.321 91.0524 13.7439 91.0524 12.5926ZM82.7465 12.6999C82.7752 11.4627 83.1392 10.4716 83.8398 9.733C84.4831 9.07694 85.2523 8.75178 86.1529 8.75178C87.0542 8.75178 87.8103 9.07694 88.4221 9.733C89.1074 10.4594 89.4504 11.448 89.4504 12.6999H82.7465Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-5-inside-5)"/>
+                            <mask id="path-6-inside-6" fill="white">
+                              <path d="M96.6863 3.66956H95.2983C94.1464 3.66956 93.5696 4.32562 93.5696 5.63265V7.68301H92.5661C91.983 7.68301 91.6922 7.95626 91.6922 8.505C91.6922 9.01042 91.983 9.2617 92.5661 9.2617H93.5696V18.7389C93.5696 19.2676 93.8251 19.5307 94.3388 19.5307C94.8649 19.5307 95.128 19.2676 95.128 18.7389V9.26074H96.4496C97.0627 9.26074 97.3694 8.99545 97.3694 8.46423C97.3694 7.94225 97.0777 7.68333 96.492 7.68333C95.8095 7.68333 95.3528 7.68333 95.1267 7.68333V6.18998C95.1267 5.6473 95.2474 5.3215 95.491 5.20621C95.6187 5.15175 96.0178 5.1234 96.6853 5.1234C97.3146 5.1234 97.6248 4.88678 97.6248 4.41734C97.6261 3.91861 97.3143 3.66956 96.6863 3.66956Z"/>
+                            </mask>
+                            <path d="M96.6863 3.66956H95.2983C94.1464 3.66956 93.5696 4.32562 93.5696 5.63265V7.68301H92.5661C91.983 7.68301 91.6922 7.95626 91.6922 8.505C91.6922 9.01042 91.983 9.2617 92.5661 9.2617H93.5696V18.7389C93.5696 19.2676 93.8251 19.5307 94.3388 19.5307C94.8649 19.5307 95.128 19.2676 95.128 18.7389V9.26074H96.4496C97.0627 9.26074 97.3694 8.99545 97.3694 8.46423C97.3694 7.94225 97.0777 7.68333 96.492 7.68333C95.8095 7.68333 95.3528 7.68333 95.1267 7.68333V6.18998C95.1267 5.6473 95.2474 5.3215 95.491 5.20621C95.6187 5.15175 96.0178 5.1234 96.6853 5.1234C97.3146 5.1234 97.6248 4.88678 97.6248 4.41734C97.6261 3.91861 97.3143 3.66956 96.6863 3.66956Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-6-inside-6)"/>
+                            <mask id="path-7-inside-7" fill="white">
+                              <path d="M103.199 7.27637C101.56 7.27637 100.263 7.92606 99.3121 9.22035C98.4599 10.3869 98.0328 11.8166 98.0328 13.5122C98.0328 15.2045 98.4599 16.6348 99.3121 17.803C100.263 19.1116 101.559 19.7661 103.199 19.7661C104.849 19.7661 106.144 19.1352 107.083 17.8657C107.936 16.7256 108.363 15.3256 108.363 13.6618C108.363 11.9405 107.93 10.4799 107.059 9.28468C106.093 7.94612 104.806 7.27637 103.199 7.27637ZM105.741 16.9479C105.13 17.9008 104.281 18.3782 103.188 18.3782C102.152 18.3782 101.315 17.8501 100.678 16.7972C100.109 15.8297 99.8274 14.6848 99.8274 13.3612C99.8274 12.0806 100.097 11.0115 100.635 10.1599C101.246 9.19042 102.097 8.70696 103.19 8.70696C104.212 8.70696 105.039 9.24073 105.678 10.3073C106.274 11.2889 106.572 12.4507 106.572 13.7886C106.571 15.0536 106.293 16.1077 105.741 16.9479Z"/>
+                            </mask>
+                            <path d="M103.199 7.27637C101.56 7.27637 100.263 7.92606 99.3121 9.22035C98.4599 10.3869 98.0328 11.8166 98.0328 13.5122C98.0328 15.2045 98.4599 16.6348 99.3121 17.803C100.263 19.1116 101.559 19.7661 103.199 19.7661C104.849 19.7661 106.144 19.1352 107.083 17.8657C107.936 16.7256 108.363 15.3256 108.363 13.6618C108.363 11.9405 107.93 10.4799 107.059 9.28468C106.093 7.94612 104.806 7.27637 103.199 7.27637ZM105.741 16.9479C105.13 17.9008 104.281 18.3782 103.188 18.3782C102.152 18.3782 101.315 17.8501 100.678 16.7972C100.109 15.8297 99.8274 14.6848 99.8274 13.3612C99.8274 12.0806 100.097 11.0115 100.635 10.1599C101.246 9.19042 102.097 8.70696 103.19 8.70696C104.212 8.70696 105.039 9.24073 105.678 10.3073C106.274 11.2889 106.572 12.4507 106.572 13.7886C106.571 15.0536 106.293 16.1077 105.741 16.9479Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-7-inside-7)"/>
+                            <mask id="path-8-inside-8" fill="white">
+                              <path d="M114.317 7.25623C113.452 7.25623 112.525 8.04541 111.543 9.62697V8.11102C111.543 7.54253 111.288 7.25686 110.776 7.25686C110.25 7.25686 109.985 7.554 109.985 8.15369V18.6997C109.985 19.2259 110.25 19.4893 110.776 19.4893C111.288 19.4893 111.543 19.2262 111.543 18.6972V13.0946C111.543 11.8404 111.885 10.899 112.57 10.2709C112.897 9.9722 113.516 9.65213 114.429 9.31009C115.11 9.05339 115.452 8.74542 115.452 8.38905C115.452 8.06133 115.341 7.79031 115.121 7.57852C114.899 7.36323 114.632 7.25623 114.317 7.25623Z"/>
+                            </mask>
+                            <path d="M114.317 7.25623C113.452 7.25623 112.525 8.04541 111.543 9.62697V8.11102C111.543 7.54253 111.288 7.25686 110.776 7.25686C110.25 7.25686 109.985 7.554 109.985 8.15369V18.6997C109.985 19.2259 110.25 19.4893 110.776 19.4893C111.288 19.4893 111.543 19.2262 111.543 18.6972V13.0946C111.543 11.8404 111.885 10.899 112.57 10.2709C112.897 9.9722 113.516 9.65213 114.429 9.31009C115.11 9.05339 115.452 8.74542 115.452 8.38905C115.452 8.06133 115.341 7.79031 115.121 7.57852C114.899 7.36323 114.632 7.25623 114.317 7.25623Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-8-inside-8)"/>
+                            <mask id="path-9-inside-9" fill="white">
+                              <path d="M125.695 12.5926C125.695 10.9566 125.254 9.65752 124.372 8.69604C123.49 7.73519 122.288 7.25525 120.767 7.25525C119.159 7.25525 117.876 7.90908 116.925 9.22025C116.043 10.4012 115.602 11.8397 115.602 13.5318C115.602 15.2385 116.049 16.6701 116.946 17.822C117.97 19.1335 119.358 19.7854 121.109 19.7854C123.015 19.7854 124.475 19.1456 125.485 17.865C125.584 17.7516 125.634 17.6093 125.634 17.4379C125.634 17.2395 125.555 17.0542 125.396 16.8835C125.24 16.7134 125.058 16.6271 124.842 16.6271C124.67 16.6271 124.393 16.7854 124.006 17.0981C123.477 17.5086 123.079 17.7889 122.808 17.9303C122.251 18.2437 121.681 18.4 121.096 18.4C120.127 18.4 119.266 17.9739 118.518 17.1198C117.767 16.2656 117.394 15.3347 117.394 14.3216H125.142C125.511 14.321 125.695 13.7439 125.695 12.5926ZM117.394 12.6999C117.423 11.4627 117.785 10.4716 118.484 9.733C119.127 9.07694 119.899 8.75178 120.799 8.75178C121.698 8.75178 122.454 9.07694 123.07 9.733C123.754 10.4594 124.097 11.448 124.097 12.6999H117.394Z"/>
+                            </mask>
+                            <path d="M125.695 12.5926C125.695 10.9566 125.254 9.65752 124.372 8.69604C123.49 7.73519 122.288 7.25525 120.767 7.25525C119.159 7.25525 117.876 7.90908 116.925 9.22025C116.043 10.4012 115.602 11.8397 115.602 13.5318C115.602 15.2385 116.049 16.6701 116.946 17.822C117.97 19.1335 119.358 19.7854 121.109 19.7854C123.015 19.7854 124.475 19.1456 125.485 17.865C125.584 17.7516 125.634 17.6093 125.634 17.4379C125.634 17.2395 125.555 17.0542 125.396 16.8835C125.24 16.7134 125.058 16.6271 124.842 16.6271C124.67 16.6271 124.393 16.7854 124.006 17.0981C123.477 17.5086 123.079 17.7889 122.808 17.9303C122.251 18.2437 121.681 18.4 121.096 18.4C120.127 18.4 119.266 17.9739 118.518 17.1198C117.767 16.2656 117.394 15.3347 117.394 14.3216H125.142C125.511 14.321 125.695 13.7439 125.695 12.5926ZM117.394 12.6999C117.423 11.4627 117.785 10.4716 118.484 9.733C119.127 9.07694 119.899 8.75178 120.799 8.75178C121.698 8.75178 122.454 9.07694 123.07 9.733C123.754 10.4594 124.097 11.448 124.097 12.6999H117.394Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-9-inside-9)"/>
+                            <mask id="path-10-inside-10" fill="white">
+                              <path d="M134.064 13.4347C133.737 13.2204 132.669 12.6945 130.863 11.8519C129.711 11.3225 129.132 10.8318 129.132 10.3767C129.132 9.36264 129.679 8.85721 130.778 8.85721C131.929 8.85721 133.075 9.22729 134.212 9.96392C134.386 10.0674 134.547 10.1158 134.704 10.1158C135.157 10.1158 135.386 9.83876 135.386 9.28429C135.386 8.98683 135.271 8.73779 135.044 8.53715C134.034 7.69764 132.761 7.27661 131.223 7.27661C130.126 7.27661 129.24 7.53267 128.556 8.04478C127.775 8.63014 127.382 9.4757 127.382 10.5865C127.382 11.5684 127.951 12.3939 129.09 13.0618C130.142 13.5477 131.203 14.029 132.271 14.5134C133.393 15.0535 133.955 15.6532 133.955 16.3058C133.955 17.5727 133.272 18.2064 131.906 18.2064C131.236 18.2064 130.546 18.0545 129.834 17.7488C129.123 17.4408 128.632 17.1058 128.362 16.7328C128.19 16.5054 128.006 16.3943 127.808 16.3943C127.607 16.3943 127.433 16.4978 127.284 16.7019C127.134 16.9083 127.061 17.1408 127.061 17.3965C127.061 17.6526 127.137 17.8736 127.296 18.0602C128.263 19.1835 129.65 19.7463 131.457 19.7463C132.652 19.7463 133.654 19.4469 134.466 18.8456C135.351 18.1752 135.792 17.2567 135.792 16.0879C135.794 15.0879 135.216 14.2035 134.064 13.4347Z"/>
+                            </mask>
+                            <path d="M134.064 13.4347C133.737 13.2204 132.669 12.6945 130.863 11.8519C129.711 11.3225 129.132 10.8318 129.132 10.3767C129.132 9.36264 129.679 8.85721 130.778 8.85721C131.929 8.85721 133.075 9.22729 134.212 9.96392C134.386 10.0674 134.547 10.1158 134.704 10.1158C135.157 10.1158 135.386 9.83876 135.386 9.28429C135.386 8.98683 135.271 8.73779 135.044 8.53715C134.034 7.69764 132.761 7.27661 131.223 7.27661C130.126 7.27661 129.24 7.53267 128.556 8.04478C127.775 8.63014 127.382 9.4757 127.382 10.5865C127.382 11.5684 127.951 12.3939 129.09 13.0618C130.142 13.5477 131.203 14.029 132.271 14.5134C133.393 15.0535 133.955 15.6532 133.955 16.3058C133.955 17.5727 133.272 18.2064 131.906 18.2064C131.236 18.2064 130.546 18.0545 129.834 17.7488C129.123 17.4408 128.632 17.1058 128.362 16.7328C128.19 16.5054 128.006 16.3943 127.808 16.3943C127.607 16.3943 127.433 16.4978 127.284 16.7019C127.134 16.9083 127.061 17.1408 127.061 17.3965C127.061 17.6526 127.137 17.8736 127.296 18.0602C128.263 19.1835 129.65 19.7463 131.457 19.7463C132.652 19.7463 133.654 19.4469 134.466 18.8456C135.351 18.1752 135.792 17.2567 135.792 16.0879C135.794 15.0879 135.216 14.2035 134.064 13.4347Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-10-inside-10)"/>
+                            <mask id="path-11-inside-11" fill="white">
+                              <path d="M141.664 7.7031C141.121 7.7031 140.773 7.7031 140.618 7.7031V4.46259C140.618 3.93424 140.352 3.66895 139.819 3.66895C139.284 3.66895 139.017 3.93424 139.017 4.46259V7.7031H137.908C137.421 7.69131 137.182 7.92603 137.182 8.40693C137.182 8.89325 137.438 9.13306 137.949 9.13306H139.017V18.7396C139.017 19.267 139.276 19.5301 139.796 19.5301C140.345 19.5301 140.619 19.267 140.619 18.7396V9.13434H141.708C142.235 9.13434 142.5 8.89707 142.5 8.41967C142.498 7.94196 142.218 7.7031 141.664 7.7031Z"/>
+                            </mask>
+                            <path d="M141.664 7.7031C141.121 7.7031 140.773 7.7031 140.618 7.7031V4.46259C140.618 3.93424 140.352 3.66895 139.819 3.66895C139.284 3.66895 139.017 3.93424 139.017 4.46259V7.7031H137.908C137.421 7.69131 137.182 7.92603 137.182 8.40693C137.182 8.89325 137.438 9.13306 137.949 9.13306H139.017V18.7396C139.017 19.267 139.276 19.5301 139.796 19.5301C140.345 19.5301 140.619 19.267 140.619 18.7396V9.13434H141.708C142.235 9.13434 142.5 8.89707 142.5 8.41967C142.498 7.94196 142.218 7.7031 141.664 7.7031Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-11-inside-11)"/>
+                            <mask id="path-12-inside-12" fill="white">
+                              <path d="M31.5558 13.6697C31.5504 13.663 31.5459 13.6611 31.5405 13.6525C30.9857 13.0605 30.1255 12.7971 28.7529 12.7971C28.2579 12.7971 27.5901 12.8315 26.935 12.9022L26.9439 1.85836C26.9439 0.994332 26.2429 0.291138 25.3776 0.291138H6.06582C5.20083 0.291138 4.50018 0.993697 4.50018 1.85868V21.1695C4.50018 22.0355 5.20051 22.7365 6.06582 22.7365H11.2497C11.3532 22.8957 11.4605 23.0517 11.5818 23.1995C12.95 24.8629 15.3431 25.7085 18.6941 25.7085C21.2483 25.7085 23.8875 25.2343 25.635 24.9215L26.2745 24.8072C28.3974 24.4397 29.5551 23.9709 30.2784 23.2027C30.5898 23.0855 30.9905 22.8775 31.1465 22.5575C31.2297 22.3852 31.2395 22.1973 31.1749 22.0243C31.1223 21.8839 31.0293 21.7727 30.9153 21.6823C30.9972 21.5664 31.0669 21.452 31.1265 21.3342C31.3806 21.2084 31.6418 21.0285 31.7602 20.7851C31.843 20.6157 31.8532 20.4249 31.7873 20.252C31.7198 20.0721 31.5828 19.9386 31.4169 19.8345C31.4106 19.7249 31.4026 19.6186 31.3886 19.5125C31.4271 19.4533 31.4615 19.395 31.4946 19.3367C31.8825 19.2007 32.4459 18.9377 32.6536 18.5106C32.7548 18.3045 32.7669 18.0746 32.687 17.8641C32.5475 17.4886 32.1717 17.2752 31.7762 17.1475C31.7851 17.0991 31.8032 17.052 31.844 17.0121C31.9313 16.8504 32.0545 16.6828 32.1574 16.5C32.6249 16.3246 33.2463 16.0096 33.4822 15.5233C33.6068 15.2698 33.6217 14.9879 33.5246 14.728C33.2485 13.9908 32.2345 13.7506 31.5558 13.6697ZM31.1459 16.4777L28.7484 16.8335L31.0488 17.0892C31.229 17.6411 31.3774 18.6759 30.4306 19.5625C30.4306 19.5625 30.4417 19.5864 30.4577 19.6275L28.5666 19.8781L30.5704 20.0724C30.6169 20.3877 30.6048 20.8027 30.3707 21.1915L28.7943 21.6508L30.0714 21.6164C30.0659 21.8651 29.8264 22.9234 26.157 23.5607C21.976 24.2865 10.249 26.8324 12.0662 17.6513C13.8857 8.46899 23.7031 4.47115 25.7022 4.47115V13.3108C24.6184 13.4831 23.6572 13.6713 22.811 13.8592C21.8731 13.7315 19.6419 13.4799 18.4766 13.8353L21.133 14.2787C18.7406 14.935 17.7033 15.5169 17.7033 15.5169C20.4842 14.7108 23.6091 14.2293 25.0601 14.0309C27.5274 13.7579 30.2503 13.9334 30.7933 14.5143C31.7243 15.5086 31.4271 16.1605 31.1459 16.4777Z"/>
+                            </mask>
+                            <path d="M31.5558 13.6697C31.5504 13.663 31.5459 13.6611 31.5405 13.6525C30.9857 13.0605 30.1255 12.7971 28.7529 12.7971C28.2579 12.7971 27.5901 12.8315 26.935 12.9022L26.9439 1.85836C26.9439 0.994332 26.2429 0.291138 25.3776 0.291138H6.06582C5.20083 0.291138 4.50018 0.993697 4.50018 1.85868V21.1695C4.50018 22.0355 5.20051 22.7365 6.06582 22.7365H11.2497C11.3532 22.8957 11.4605 23.0517 11.5818 23.1995C12.95 24.8629 15.3431 25.7085 18.6941 25.7085C21.2483 25.7085 23.8875 25.2343 25.635 24.9215L26.2745 24.8072C28.3974 24.4397 29.5551 23.9709 30.2784 23.2027C30.5898 23.0855 30.9905 22.8775 31.1465 22.5575C31.2297 22.3852 31.2395 22.1973 31.1749 22.0243C31.1223 21.8839 31.0293 21.7727 30.9153 21.6823C30.9972 21.5664 31.0669 21.452 31.1265 21.3342C31.3806 21.2084 31.6418 21.0285 31.7602 20.7851C31.843 20.6157 31.8532 20.4249 31.7873 20.252C31.7198 20.0721 31.5828 19.9386 31.4169 19.8345C31.4106 19.7249 31.4026 19.6186 31.3886 19.5125C31.4271 19.4533 31.4615 19.395 31.4946 19.3367C31.8825 19.2007 32.4459 18.9377 32.6536 18.5106C32.7548 18.3045 32.7669 18.0746 32.687 17.8641C32.5475 17.4886 32.1717 17.2752 31.7762 17.1475C31.7851 17.0991 31.8032 17.052 31.844 17.0121C31.9313 16.8504 32.0545 16.6828 32.1574 16.5C32.6249 16.3246 33.2463 16.0096 33.4822 15.5233C33.6068 15.2698 33.6217 14.9879 33.5246 14.728C33.2485 13.9908 32.2345 13.7506 31.5558 13.6697ZM31.1459 16.4777L28.7484 16.8335L31.0488 17.0892C31.229 17.6411 31.3774 18.6759 30.4306 19.5625C30.4306 19.5625 30.4417 19.5864 30.4577 19.6275L28.5666 19.8781L30.5704 20.0724C30.6169 20.3877 30.6048 20.8027 30.3707 21.1915L28.7943 21.6508L30.0714 21.6164C30.0659 21.8651 29.8264 22.9234 26.157 23.5607C21.976 24.2865 10.249 26.8324 12.0662 17.6513C13.8857 8.46899 23.7031 4.47115 25.7022 4.47115V13.3108C24.6184 13.4831 23.6572 13.6713 22.811 13.8592C21.8731 13.7315 19.6419 13.4799 18.4766 13.8353L21.133 14.2787C18.7406 14.935 17.7033 15.5169 17.7033 15.5169C20.4842 14.7108 23.6091 14.2293 25.0601 14.0309C27.5274 13.7579 30.2503 13.9334 30.7933 14.5143C31.7243 15.5086 31.4271 16.1605 31.1459 16.4777Z" fill="black" stroke="black" stroke-width="0.636954" mask="url(#path-12-inside-12)"/>
+                          </g>
+                          <defs>
+                            <filter id="filter0_d" x="0" y="0" width="147" height="34" filterUnits="userSpaceOnUse"  color-interpolation-filters="sRGB">
+                              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                              <feOffset dy="4"/>
+                              <feGaussianBlur stdDeviation="2"/>
+                              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                          </defs>
+                        </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Clients end-->
+  <!--Facts about us-->
+  <div class="navi container__grey container-facts" id="social">
+    <div class="container text-center">
+        <span class="all__title wow bounceIn">SOME FUN FACTS ABOUT US</span>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <div class="facts-wrap__content">
+              <div class="facts-wrap__icon facts-wrap__icon-facebook">
+                <a class="facts-link" href="#"><i class="fab fa-facebook-f facts-wrap__icon-img facts-icon__facebook"></i></a>
+              </div>
+              <span class="facts-wrap__title">FACEBOOK</span>
+              <span class="facts-wrap__subtitle facts-subtitle__facebook ">6558</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <div class="facts-wrap__content">
+              <div class="facts-wrap__icon facts-wrap__icon-dribble">
+                <a class="facts-link" href="#"><i class="fab fa-dribbble facts-wrap__icon-img facts-icon__dribble"></i></a>
+              </div>
+              <span class="facts-wrap__title">DRIBBBLE</span>
+              <span class="facts-wrap__subtitle facts-subtitle__dribble">360+</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <div class="facts-wrap__content ">
+              <div class="facts-wrap__icon facts-wrap__icon-twitter">
+                <a class="facts-link" href="#"><i class="fab fa-twitter facts-wrap__icon-img facts-icon__twitter"></i></a>
+              </div>
+              <span class="facts-wrap__title">TWITTER</span>
+              <span class="facts-wrap__subtitle facts-subtitle__twitter">3654</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <div class="facts-wrap__content">
+              <div class="facts-wrap__icon facts-wrap__icon-google">
+                <a class="facts-link" href="#"><i class="fab fa-google-plus-g facts-wrap__icon-img facts-icon__google"></i></a>
+              </div>
+              <span class="facts-wrap__title">GOOGLE PLUS</span>
+              <span class="facts-wrap__subtitle facts-subtitle__google">23K</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!--Facts about us end-->
+  <!--Blog-->
+  <div class="navi container__white blog-size" id="blog">
+    <div class="container text-center">
+      <span class="all__title facts-title wow bounceIn">BRIEF LOOK AT OUR BLOG</span>
+      <div class="row">
+        <div class="offset-1 col-10 offset-sm-3 col-sm-6 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-0 col-xl-6 wow bounceInLeft">
+          <div class="blog-wrap__content">
+            <div class="row">
+              <div class="col-md-6 blog-content">
+                <div class="blog-item">
+                  <img src="images/blog1.png" class="blog-item__img" alt="">
+                  <div class="blog-item__nav">
+                    <i class="fas fa-expand-arrows-alt blog-item__nav-icon"></i>
+                    <i class="fas fa-search blog-item__nav-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 blog-content">
+                <div class="blog-text">
+                  <span class="blog-text__title">Your Blog Title Can Be Placed</span>
+                  <span class="blog-text__content">Keytar McSweeney's Williamsburg an readymade leggings try-hard 90street hart letterpress hoodie occupy estern Anderson Banksy. Asymme tignunj ... </span>
+                  <div class="blog-text__footer">
+                    <span class="blog-text__footer-head"><i class="far fa-calendar blog-text__footer-icon"></i>24 Jan</span>
+                    <span class="blog-text__footer-head"><i class="far fa-eye blog-text__footer-icon"></i>27 Views</span>
+                    <span class="blog-text__footer-head"><i class="far fa-heart blog-text__footer-icon"></i>12 Likes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-1 col-10 offset-sm-3 col-sm-6 offset-md-0 col-md-5 offset-lg-0 col-lg-4 offset-xl-0 col-xl-6 wow bounceInRight">
+          <div class="blog-wrap__content">
+            <div class="row">
+              <div class="col-md-6 blog-content">
+                <div class="blog-item">
+                  <img src="images/blog2.png" class="blog-item__img" alt="">
+                  <div class="blog-item__nav">
+                    <i class="fas fa-expand-arrows-alt blog-item__nav-icon"></i>
+                    <i class="fas fa-search blog-item__nav-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 blog-content">
+                <div class="blog-text">
+                  <span class="blog-text__title">Your Blog Title Can Be Placed</span>
+                  <span class="blog-text__content">Keytar McSweeney's Williamsburg an readymade leggings try-hard 90street hart letterpress hoodie occupy estern Anderson Banksy. Asymme tignunj ... </span>
+                  <div class="blog-text__footer">
+                    <span class="blog-text__footer-head"><i class="far fa-calendar blog-text__footer-icon"></i>24 Jan</span>
+                    <span class="blog-text__footer-head"><i class="far fa-eye blog-text__footer-icon"></i>27 Views</span>
+                    <span class="blog-text__footer-head"><i class="far fa-heart blog-text__footer-icon"></i>12 Likes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-1 col-10 offset-sm-3 col-sm-6 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-0 col-xl-6 wow bounceInLeft">
+          <div class="blog-wrap__content">
+            <div class="row d-flex flex-row-reverse">
+              <div class="col-md-6 blog-content">
+                <div class="blog-item">
+                  <img src="images/blog3.png" class="blog-item__img" alt="">
+                  <div class="blog-item__nav">
+                    <i class="fas fa-expand-arrows-alt blog-item__nav-icon"></i>
+                    <i class="fas fa-search blog-item__nav-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 blog-content">
+                <div class="blog-text blog-text__reverse">
+                  <span class="blog-text__title">Your Blog Title Can Be Placed</span>
+                  <span class="blog-text__content">Keytar McSweeney's Williamsburg an readymade leggings try-hard 90street hart letterpress hoodie occupy estern Anderson Banksy. Asymme tignunj ... </span>
+                  <div class="blog-text__footer">
+                    <span class="blog-text__footer-head"><i class="far fa-calendar blog-text__footer-icon"></i>24 Jan</span>
+                    <span class="blog-text__footer-head"><i class="far fa-eye blog-text__footer-icon"></i>27 Views</span>
+                    <span class="blog-text__footer-head"><i class="far fa-heart blog-text__footer-icon"></i>12 Likes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-1 col-10 offset-sm-3 col-sm-6 offset-md-0 col-md-5 offset-lg-0 col-lg-4 offset-xl-0 col-xl-6 wow bounceInRight">
+          <div class="blog-wrap__content">
+            <div class="row d-flex flex-row-reverse">
+              <div class="col-md-6 blog-content">
+                <div class="blog-item">
+                  <img src="images/blog4.png" class="blog-item__img" alt="">
+                  <div class="blog-item__nav">
+                    <i class="fas fa-expand-arrows-alt blog-item__nav-icon"></i>
+                    <i class="fas fa-search blog-item__nav-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 blog-content">
+                <div class="blog-text blog-text__reverse">
+                  <span class="blog-text__title">Your Blog Title Can Be Placed</span>
+                  <span class="blog-text__content">Keytar McSweeney's Williamsburg an readymade leggings try-hard 90street hart letterpress hoodie occupy estern Anderson Banksy. Asymme tignunj ... </span>
+                  <div class="blog-text__footer">
+                    <span class="blog-text__footer-head"><i class="far fa-calendar blog-text__footer-icon"></i>24 Jan</span>
+                    <span class="blog-text__footer-head"><i class="far fa-eye blog-text__footer-icon"></i>27 Views</span>
+                    <span class="blog-text__footer-head"><i class="far fa-heart blog-text__footer-icon"></i>12 Likes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Blog end-->
+  <!--Maps and form-->
+  <div class="navi container-map wow bounceIn" id="contactUs">
+    <iframe id="gmap_canvas" class="map-wrap" src="https://maps.google.com/maps?q=mit&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <div class="container">
+      <div class="row">
+        <div class="offset-1 col-9 offset-sm-1 col-sm-6 offset-md-1 col-md-5">
+          <div class="form-item text-center">
+            <span class="all__title form-item__title">KEEP IN TOUCH WITH US</span>
+            <form class="form-item__content">
+              <div class="form-group">
+                <input type="text" id="form-name" class="form-control form-item__content-data" placeholder="Name *">
+              </div>
+              <div class="form-group">
+                <input type="text" id="form-email" class="form-control form-item__content-data" placeholder="Email *">
+              </div>
+              <div class="form-group">
+                <textarea id="form-text" class="form-control form-item__content-data form-item__content-text" placeholder="Your Message *" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn form-item__content-send">SEND MESSAGE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Maps and form end-->
+  <!--Footer-->
+  <footer class="container__color">
+    <div class="container">
+      <div class="about-wrap">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 wow bounceIn">
+            <span class="footer-title">ABOUT US</span>
+            <span class="footer-text">Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag. Dreamcatcher locavore iPhone chillwave, occupy trust fund slow-carb distillery art party narwhal. Ennui shabby chic Brooklyn, fanny pack direct trade Tumblr tattooed retro polaroid deep v chia vinyl Austin Tonx food truck. Literally ugh umami, pickled jean shorts</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-2 wow bounceIn">
+            <span class="footer-title">ARCHIVES</span>
+            <ul class="footer-archives">
+              <li class="footer-archives__content">
+                <a class="footer-archives__content-title" href="#">March 2015</a>
+                <span class="footer-archives__content-public">1890 Published</span>
+              </li>
+              <li class="footer-archives__content">
+                <a class="footer-archives__content-title" href="#">April 2015</a>
+                <span class="footer-archives__content-public">999 Published</span>
+              </li>
+              <li class="footer-archives__content">
+                <a class="footer-archives__content-title" href="#">August 2015</a>
+                <span class="footer-archives__content-public">2190 Published</span>
+              </li>
+              <li class="footer-archives__content">
+                <a class="footer-archives__content-title" href="#">October 2015</a>
+                <span class="footer-archives__content-public">790 Published</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <span class="footer-title">FEATURED TAGS</span>
+            <ul class="nav">
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Flat Design</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Awesome</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Beautiful</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Icons</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">UX Design</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">HTML</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">UI Design</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Themeforest</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">UI Kit</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">CSS</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Features</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">IOS</a>
+              </li>
+              <li class="nav-item tags-item">
+                <a class="nav-link tags-item__link" href="#">Graphic Design</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 wow bounceIn">
+            <span class="footer-title">RECENT POSTS</span>
+            <ul class="list-unstyled">
+              <li class="media recent-content">
+                <img src="images/occupy.png" class="mr-3" alt="...">
+                <div class="media-body recent-content__media">
+                  <a class="recent-content__media-title" href="">Organic Occupy</a>
+                  <span class="recent-content__media-text">Literally ugh umami, pickled jean shorts ...</span>
+                </div>
+              </li>
+              <li class="media recent-content">
+                <img src="images/chillwave.png" class="mr-3" alt="...">
+                <div class="media-body recent-content__media">
+                  <a class="recent-content__media-title" href="">iPhone Chillwave</a>
+                  <span class="recent-content__media-text">Literally ugh umami, pickled jean shorts ...</span>
+                </div>
+              </li>
+              <li class="media recent-content">
+                <img src="images/heading.png" class="mr-3" alt="...">
+                <div class="media-body recent-content__media">
+                  <a class="recent-content__media-title" href="">Blog Heading</a>
+                  <span class="recent-content__media-text">Literally ugh umami, pickled jean shorts ...</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container footer-wrap">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 col-12 footer-header wow bounceIn">
+            <span class="copyright-title">© Copyright by <a class="copyright-title__link" href="#">Bootstrap Guru</a></span>
+          </div>
+          <div class="footer-menu col-12 col-sm-12 offset-md-3 col-md-6 d-flex flex-column justify-content-center wow bounceIn">
+            <ul class="nav footer-wrap__content">
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link active" href="#home-page">Home</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#services">Services</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#testimonials">Testimonials</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#social">Social</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item footer-item">
+                <a class="nav-link footer-item__link" href="#contactUs">Contact Us</a>
+              </li>
+              <li class="nav-item footer-item">
+                <button class="btn footer-item__btn" id="singInFooter" type="submit">Sign In</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Footer end-->
+  <!-- build:js js/combined.js -->
+  <script src="./js/vendors.js" type="text/javascript"></script>
+  <script src="./js/main.js" type="text/javascript"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
